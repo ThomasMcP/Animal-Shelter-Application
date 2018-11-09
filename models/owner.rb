@@ -10,6 +10,7 @@ class Owner
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @address = options['address']
+    @pet_id = options['pet_id']
   end
 
   def save()
