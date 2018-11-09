@@ -12,6 +12,11 @@ class Owner
     @address = options['address']
   end
 
+  def save()
+    sql =
+
+  end
+
 
 
 
