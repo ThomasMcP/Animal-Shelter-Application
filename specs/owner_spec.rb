@@ -12,4 +12,10 @@ class TestOwner < Minitest::Test
     assert_nil (@owner.name = nil)
   end
 
+  def test_can_get_owner_address
+    assert_nil (@owner.address = nil)
+  end
+
+
+
 end
