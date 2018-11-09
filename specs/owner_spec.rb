@@ -1,12 +1,15 @@
-require('autorun')
+require('minitest/autorun')
 require('minitest/rg')
 require_relative('../models/owner.rb')
 
 class TestOwner < Minitest::Test
 
   def setup
-    @owner = Owner.new({
-      'name' => 'David Tennant'
-      'address' => 'The Tardis' 
-      })
+    @owner = Owner.new()
   end
+
+  def test_can_get_owner_name
+    assert_nil (@owner.name = nil)
+  end
+
+end
