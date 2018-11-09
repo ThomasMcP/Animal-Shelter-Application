@@ -13,4 +13,12 @@ class Animal
     @day_admitted = options['day_admitted']
     @age = options['age']
   end
+
+  def save()
+    sql = ""
+    values = [@name, @adoption_status, @day_admitted, @age]
+    result = Sqlrunner.run(sql, values)
+    id = result.first['id']
+    @id = id
+  end
 end
