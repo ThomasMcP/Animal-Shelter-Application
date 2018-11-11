@@ -1,5 +1,10 @@
-require_relative('../models/owner.rb')
+require_relative('../models/animal.rb')
 
-owner1 = Owner.new({
+
+animal1 = Animal.new({
   'name' => 'David Tennant',
-  'address' => 'Edinburgh'})
+  'adoption_status' => 'Adoptable',
+  'day_admitted' => '2018-08-14 12:32:36',
+  'age' => 2 })
+
+animal1.save

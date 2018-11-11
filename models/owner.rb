@@ -14,9 +14,10 @@ class Owner
   end
 
   def save()
-    sql =
+    sql = ""
+  end 
 
-  end
+
 
 
 

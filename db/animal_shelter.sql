@@ -15,4 +15,4 @@ CREATE TABLE owners(
   name VARCHAR(255),
   address VARCHAR(255),
   pet_id INT8 REFERENCES animals(id)
-)
+);
