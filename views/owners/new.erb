@@ -1,0 +1,28 @@
+<h2>Add New Owner</h2>
+
+<form action="/owners" method="post">
+
+  <div class="form-element">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name"/>
+  </div>
+
+  <div class="form-element">
+    <label for="address"> Address:</label>
+    <input type="text" name="address", id="address" >
+  </div>
+
+  <div class="form-el">
+      <label for="pet_select">Select Pet:</label>
+      <select name="pet_id" id="pet_select">
+        <% @animals.each do |animal| %>
+            <option value=<%= animal.id %> </option>
+        <% end %>
+      </select>
+    </div>
+
+  <div class="form-el">
+      <input type="submit" value="Add Owner"/>
+    </div>
+
+</form>
