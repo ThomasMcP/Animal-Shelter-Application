@@ -7,7 +7,7 @@ CREATE TABLE animals(
   name VARCHAR(255),
   age INT4,
   adoption_status VARCHAR(255),
-  day_admitted TIMESTAMP
+  day_admitted DATE
 );
 
 CREATE TABLE owners(
