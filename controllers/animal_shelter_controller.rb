@@ -7,7 +7,3 @@ also_reload('./models/*')
 get '/home' do
   erb(:index)
 end
-
-get '/animals' do
-  erb(:animals)
-end

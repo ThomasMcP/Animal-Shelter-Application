@@ -1,0 +1,14 @@
+<h2>List of Owners</h2>
+
+<div id="owners-wrapper">
+  <% @owners.each do |owner| %>
+
+  <div class="owner">
+    <h3><a href="/owners"></a></h3>
+      <p> Name: <%= owner.name %> </p>
+      <p> <%= owner.address %> </p>
+      <p> <%= owner.pet_id %> </p>
+      <hr>
+  </div>
+  <% end %>
+</div>
