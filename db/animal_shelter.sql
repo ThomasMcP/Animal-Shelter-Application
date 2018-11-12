@@ -14,5 +14,5 @@ CREATE TABLE owners(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   address VARCHAR(255),
-  pet_id INT8 REFERENCES animals(id)
+  pet_id INT8 REFERENCES animals(id) ON DELETE CASCADE
 );

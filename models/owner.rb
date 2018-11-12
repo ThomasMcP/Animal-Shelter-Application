@@ -4,7 +4,7 @@ require_relative('../db/sql_runner.rb')
 class Owner
 
   attr_accessor :name, :address
-  attr_reader :id, :pet_id
+  attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
