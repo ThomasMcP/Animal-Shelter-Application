@@ -1,0 +1,13 @@
+#welcome-page-heading {
+  text-align: center;
+}
+
+#front_page_image {
+  image-orientation: from-image;
+  border: 5px double;
+
+}
+
+img {
+  transform: rotate(-90deg);
+}

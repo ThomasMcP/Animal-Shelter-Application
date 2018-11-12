@@ -3,6 +3,7 @@ require_relative('../models/owner.rb')
 require('pry-byebug')
 
 Animal.delete_all()
+Owner.delete_all()
 
 animal1 = Animal.new({
   'name' => 'David Tennant',
