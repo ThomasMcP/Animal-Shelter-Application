@@ -40,7 +40,20 @@ class Owner
       WHERE id = $4;"
       values = [@name, @address, @pet_id, @id]
       SqlRunner.run(sql, values)
-    end
+  end
+
+  def self.destroy(id)
+    sql = "DELETE FROM owners WHERE id = $1"
+    values = [id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM owners;"
+    SqlRunner.run(sql)
+  end
+
+
 
 
 
