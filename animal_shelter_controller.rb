@@ -4,6 +4,10 @@ require_relative('models/animal.rb')
 require_relative('models/owner.rb')
 also_reload('./models/*')
 
-get '/scottish-animal-shelter' do
+get '/home' do
   erb(:index)
+end
+
+get '/animals' do
+  
 end

@@ -3,11 +3,10 @@
 }
 
 #front_page_image {
-  image-orientation: from-image;
+  display: inline-block;
   border: 5px double;
-
 }
 
 img {
-  transform: rotate(-90deg);
+  transform: rotate(-270deg);
 }
