@@ -1,6 +1,5 @@
 require_relative('../models/animal.rb')
 require_relative('../models/owner.rb')
-require('time')
 require('pry-byebug')
 
 Animal.delete_all()
