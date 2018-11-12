@@ -6,8 +6,9 @@
   <div class="owner">
     <h3><a href="/owners"></a></h3>
       <p> Name: <%= owner.name %> </p>
-      <p> <%= owner.address %> </p>
-      <p> <%= owner.pet_id %> </p>
+      <p> Address: <%= owner.address %> </p>
+      <p> Pet: <%= owner.pet_id %> </p>
+      <a href="/owners/<%= owner.id %>/edit">Edit</a>
       <hr>
   </div>
   <% end %>
