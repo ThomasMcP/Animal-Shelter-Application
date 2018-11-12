@@ -28,4 +28,11 @@ class Animal
     id = result.first['id']
     @id = id.to_i
   end
+
+  def self.find(id)
+    sql = "SELECT * FROM animals WHERE id = $1;"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return Animal.new(result.first)
+  end
 end

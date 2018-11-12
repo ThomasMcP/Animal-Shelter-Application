@@ -19,8 +19,11 @@ animal2 = Animal.new({
 
 
 animal1.save
+
 animal2.save
 
 Animal.all
+
+
 binding.pry
 nil
