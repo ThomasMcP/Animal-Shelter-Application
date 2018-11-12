@@ -1,0 +1,30 @@
+<h2>Edit Animal</h2>
+
+<form action="/animals/<%= @animal.id%>" method="post" >
+
+  <div class="form-element">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= @animal.name %>"/>
+  </div>
+
+  <div class="form-element">
+    <label for="adoption_status">Adoption Status:</label>
+    <input type="text" name="adoption_status", id="adoption_status" value="<%= @animal.adoption_status %>" >
+  </div>
+
+  <div class="form-element">
+    <label for="day_admitted"> Day Admitted:</label>
+    <input type="date" name="day_admitted", id="day_admitted" value="<%= @animal.day_admitted %>">
+  </div>
+
+  <div class="form-element">
+    <label for="age">Age:</label>
+    <input type="number" name="age", id="age"
+    value="<%= @animal.age %>">
+  </div>
+
+  <div class="form-el">
+      <input type="submit" value="Edit Animal"/>
+  </div>
+
+</form>
