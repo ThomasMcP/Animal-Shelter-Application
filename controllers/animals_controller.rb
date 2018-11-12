@@ -8,7 +8,7 @@ get '/animals' do
   erb(:"animals/animals")
 end
 
-get '/animals/new' do
-  @houses = Animal.all
-  erb(:new)
-end
+# get '/animals/new' do
+#   @houses = Animal.all
+#   erb(:new)
+# end
