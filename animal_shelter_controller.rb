@@ -9,5 +9,5 @@ get '/home' do
 end
 
 get '/animals' do
-  
+  erb(:animals)
 end
