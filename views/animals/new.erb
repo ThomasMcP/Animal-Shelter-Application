@@ -18,8 +18,13 @@
   </div>
 
   <div class="form-element">
-    <label for="adoption_status">Adoption Status:</label>
-    <input type="text" name="adoption_status", id="adoption_status" >
+    <label for="adoption_select">Adoption Status:</label>
+    <select name="adoption_status", id="adoption_status">
+      <% @adopt.each do |selection| %>
+      <option value=<%= selection %>><%= p selection%>
+      </option>
+      <% end %>
+    </select>
   </div>
 
   <div class="form-element">

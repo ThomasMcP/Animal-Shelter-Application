@@ -15,8 +15,10 @@
   <div class="form-el">
       <label for="pet_select">Select Pet:</label>
       <select name="pet_select" id="pet_select">
-        <% @owners.each do |owner| %>
-            <option value=<%= owner.pet_id %> </option>
+        <% @animals.each do |animal| %>
+            <option value=<%= animal.id %> selected="<%= @owner.pet_id %>">
+              <%= animal.name %>
+            </option>
         <% end %>
       </select>
     </div>

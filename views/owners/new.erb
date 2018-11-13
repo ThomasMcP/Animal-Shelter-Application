@@ -12,11 +12,13 @@
     <input type="text" name="address", id="address" >
   </div>
 
-  <div class="form-el">
+  <div class="form-element">
       <label for="pet_select">Select Pet:</label>
       <select name="pet_id" id="pet_select">
         <% @animals.each do |animal| %>
-            <option value=<%= animal.id %> </option>
+            <option value=<%= animal.id %>>
+              <%= animal.name %>
+             </option>
         <% end %>
       </select>
     </div>

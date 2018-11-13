@@ -9,6 +9,7 @@ get '/animals' do
 end
 
 get '/animals/new' do
+  @adopt = ['Adoptable', 'Not Adoptable']
   @animals = Animal.all
   erb(:"animals/new")
 end
@@ -24,6 +25,7 @@ get '/animals/:id' do
 end
 
 get '/animals/:id/edit' do
+  @adopt = ['Adoptable', 'Not Adoptable']
   @animal = Animal.find(params['id'])
   erb(:"animals/edit")
 end

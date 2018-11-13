@@ -26,6 +26,7 @@ get '/owners/:id' do
 end
 
 get '/owners/:id/edit' do
+  @animals = Animal.all
   @owners = Owner.all()
   @owner = Owner.find(params['id'])
   erb(:"owners/edit")
@@ -36,10 +37,11 @@ post '/owners/:id' do
   redirect to "/owners/#{params['id']}"
 end
 
-post '/owners/:id' do
-  Owner.new(params).update
-  redirect to "/owner/#{params['id']}"
-end
+# post '/owners/:id' do
+#   @animals = Animal.all
+#   Owner.new(params).update
+#   redirect to "/owner/#{params['id']}"
+# end
 
 post '/owners/:id/delete' do
   Owner.destroy(params['id'])
