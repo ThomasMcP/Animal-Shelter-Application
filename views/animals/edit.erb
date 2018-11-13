@@ -8,6 +8,16 @@
   </div>
 
   <div class="form-element">
+      <label for="type">Type:</label>
+      <input type="text" name="type" id="type" value="<%= @animal.type %>"/>
+  </div>
+
+  <div class="form-element">
+      <label for="breed">Breed:</label>
+      <input type="text" name="breed" id="breed" value="<%= @animal.breed %>"/>
+  </div>
+
+  <div class="form-element">
     <label for="adoption_status">Adoption Status:</label>
     <input type="text" name="adoption_status", id="adoption_status" value="<%= @animal.adoption_status %>" >
   </div>

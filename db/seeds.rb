@@ -7,6 +7,8 @@ Owner.delete_all()
 
 animal1 = Animal.new({
   'name' => 'David Tennant',
+  'type' => 'Dog',
+  'breed' => 'Husky',
   'adoption_status' => 'Adoptable',
   'day_admitted' => '2018-08-14',
   'age' => 2 })
@@ -14,6 +16,8 @@ animal1.save
 
 animal2 = Animal.new({
   'name' => 'Christopher Eccelston',
+  'type' => 'Cat',
+  'breed' => 'Bald One',
   'adoption_status' => 'Adoptable',
   'day_admitted' => '2008-02-15',
   'age' => 10 })

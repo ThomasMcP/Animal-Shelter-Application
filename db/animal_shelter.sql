@@ -6,6 +6,8 @@ CREATE TABLE animals(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
   age INT4,
+  type VARCHAR(255),
+  breed VARCHAR(255),
   adoption_status VARCHAR(255),
   day_admitted DATE
 );
