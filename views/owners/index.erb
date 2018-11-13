@@ -7,7 +7,6 @@
     <h3><a href="/owners"></a></h3>
       <p> <b>Name:</b> <%= owner.name %> </p>
       <p> <b>Address:</b> <%= owner.address %> </p>
-      <p> <b>Pet:</b> <%= owner.pet_id %> </p>
       <a href="/owners/<%= owner.id %>/edit">Edit</a>
       <form action="/owners/<%= owner.id %>/delete"  method="post"> <input type="submit" value="Delete">
       </form>
