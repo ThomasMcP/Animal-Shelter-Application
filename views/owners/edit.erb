@@ -14,15 +14,16 @@
 
   <div class="form-el">
       <label for="pet_select">Select Pet:</label>
-      <select name="pet_id" id="pet_select">
-        <% @animals.each do |animal| %>
-            <option value=<%= animal.id %> </option>
+      <select name="pet_select" id="pet_select">
+        <% @owners.each do |owner| %>
+            <option value=<%= owner.pet_id %> </option>
         <% end %>
       </select>
     </div>
 
+
   <div class="form-el">
-      <input type="submit" value="Add Owner"/>
+      <input type="submit" value="Edit Owner"/>
     </div>
 
 </form>

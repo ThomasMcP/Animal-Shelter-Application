@@ -32,3 +32,8 @@ post '/animals/:id' do
   Animal.new(params).update
   redirect to "/animals/#{params['id']}"
 end
+
+post '/animals/:id/delete' do
+  Animal.destroy(params['id'])
+  redirect to '/animals'
+end

@@ -10,6 +10,8 @@
       <p> Day Admitted: <%= animal.day_admitted %> </p>
       <p> Age: <%= animal.age %> </p>
       <a href="/animals/<%= animal.id %>/edit">Edit</a>
+      <form action="/animals/<%= animal.id %>/delete"  method="post"> <input type="submit" value="Delete">
+      </form>
       <hr>
   </div>
   <% end %>
