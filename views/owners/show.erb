@@ -1,4 +1,6 @@
   <p> <b>Name:</b> <%= @owner.name %> </p>
   <p> <b>Address:</b> <%= @owner.address %> </p>
-  <p> <b>Pet:</b> <%= @owner.pet_id %> </p>
+    <% @variable.each do |animal|%>
+    <p> <b>Pets:</b> <%= animal.name %> </p>
+    <% end %>
   <hr>

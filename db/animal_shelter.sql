@@ -18,3 +18,8 @@ CREATE TABLE animals(
   day_admitted DATE,
   owner_id INT8 REFERENCES owners(id) ON DELETE CASCADE
 );
+
+-- CREATE TABLE adoptions(
+--   id SERIAL8 PRIMARY KEY,
+--   owner_id
+-- )

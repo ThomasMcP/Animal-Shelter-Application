@@ -2,7 +2,9 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/animal.rb')
 require_relative('../models/owner.rb')
+require('pry-byebug')
 also_reload('./models/*')
+
 
 get '/owners' do
   @animals = Animal.all()
@@ -22,7 +24,9 @@ post '/owners' do
 end
 
 get '/owners/:id' do
+  @animals = Animal.all()
   @owner = Owner.find(params['id'])
+  @variable = @owner.pets_by_owner
   erb(:"owners/show")
 end
 

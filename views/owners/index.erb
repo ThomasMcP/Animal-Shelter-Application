@@ -7,9 +7,14 @@
     <h3><a href="/owners"></a></h3>
       <p> <b>Name:</b> <%= owner.name %> </p>
       <p> <b>Address:</b> <%= owner.address %> </p>
+
       <a href="/owners/<%= owner.id %>/edit">Edit</a>
+
+      <a href="/owners/<%= owner.id %>">Pets</a>
+
       <form action="/owners/<%= owner.id %>/delete"  method="post"> <input type="submit" value="Delete">
       </form>
+
       <hr>
   </div>
   <% end %>
