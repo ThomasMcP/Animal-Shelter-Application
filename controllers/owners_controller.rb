@@ -5,6 +5,7 @@ require_relative('../models/owner.rb')
 also_reload('./models/*')
 
 get '/owners' do
+  @animals = Animal.all()
   @owners = Owner.all
   erb(:"owners/index")
 end
