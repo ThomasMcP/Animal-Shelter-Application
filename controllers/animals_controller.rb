@@ -31,6 +31,7 @@ get '/animals/:id/edit' do
 end
 
 post '/animals/:id' do
+  p params
   Animal.new(params).update
   redirect to "/animals/#{params['id']}"
 end

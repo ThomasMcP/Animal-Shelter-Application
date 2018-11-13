@@ -21,7 +21,7 @@
     <label for="adoption_select">Adoption Status:</label>
     <select name="adoption_status", id="adoption_status">
       <% @adopt.each do |selection| %>
-      <option value=<%= selection %>><%= p selection%>
+      <option value=<%= selection %>><%= selection%>
       </option>
       <% end %>
     </select>
