@@ -16,5 +16,5 @@ CREATE TABLE animals(
   breed VARCHAR(255),
   adoption_status VARCHAR(255),
   day_admitted DATE,
-  owner_id INT8 UNIQUE REFERENCES owners(id) ON DELETE CASCADE
+  owner_id INT8 REFERENCES owners(id) ON DELETE CASCADE
 );

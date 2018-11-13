@@ -5,13 +5,24 @@ require('pry-byebug')
 Animal.delete_all()
 Owner.delete_all()
 
+owner1 = Owner.new({
+  'name' => 'Johnny Teaspoons',
+  'address' => '44 Wire Place, Edinburgh'})
+owner1.save
+
+owner2 = Owner.new({
+  'name' => 'Mr David Dickinson',
+  'address' => '1 Bronzed Place, Shropshire'})
+owner2.save
+
 animal1 = Animal.new({
   'name' => 'David Tennant',
   'type' => 'Dog',
   'breed' => 'Husky',
   'adoption_status' => 'Adoptable',
   'day_admitted' => '2018-08-14',
-  'age' => 2 })
+  'age' => 2,
+  'owner_id' => owner1.id})
 animal1.save
 
 animal2 = Animal.new({
@@ -20,7 +31,8 @@ animal2 = Animal.new({
   'breed' => 'Bald One',
   'adoption_status' => 'Adoptable',
   'day_admitted' => '2008-02-15',
-  'age' => 10 })
+  'age' => 10,
+  'owner_id' => owner1.id })
 animal2.save
 
 animal3 = Animal.new({
@@ -29,7 +41,8 @@ animal3 = Animal.new({
   'breed' => 'Ginger One',
   'adoption_status' => 'Not Adoptable',
   'day_admitted' => '2004-02-15',
-  'age' => 14 })
+  'age' => 14,
+  'owner_id' => owner2.id})
 animal3.save
 
 animal4 = Animal.new({
@@ -38,20 +51,9 @@ animal4 = Animal.new({
   'breed' => 'Pug',
   'adoption_status' => 'Not Adoptable',
   'day_admitted' => '2015-02-15',
-  'age' => 5 })
+  'age' => 5,
+  'owner_id' => owner2.id })
 animal4.save
-
-owner1 = Owner.new({
-  'name' => 'Johnny Teaspoons',
-  'address' => '44 Wire Place, Edinburgh',
-  'pet_id' => animal1.id })
-owner1.save
-
-owner2 = Owner.new({
-  'name' => 'Mr David Dickinson',
-  'address' => '1 Bronzed Place, Shropshire',
-  'pet_id' => animal2.id })
-owner2.save
 
 binding.pry
 nil

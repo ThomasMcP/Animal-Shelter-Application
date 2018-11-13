@@ -24,7 +24,7 @@ class Animal
   end
 
   def save()
-    sql = "INSERT INTO animals (name, type, breed, adoption_status, day_admitted, age) VALUES ( $1, $2, $3, $4, $5, $6, $7) RETURNING id;"
+    sql = "INSERT INTO animals (name, type, breed, adoption_status, day_admitted, age, owner_id) VALUES ( $1, $2, $3, $4, $5, $6, $7) RETURNING id;"
     values = [@name, @type, @breed, @adoption_status, @day_admitted, @age, @owner_id]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
@@ -39,7 +39,7 @@ class Animal
   end
 
   def update()
-      sql = "UPDATE animals SET(name, type, breed, adoption_status, day_admitted, age) = ($1, $2, $3, $4, $5, $6, $7)
+      sql = "UPDATE animals SET(name, type, breed, adoption_status, day_admitted, age, owner_id) = ($1, $2, $3, $4, $5, $6, $7)
       WHERE id = $8"
       values = [@name, @type, @breed, @adoption_status, @day_admitted, @age, @owner_id, @id]
       SqlRunner.run(sql, values)
