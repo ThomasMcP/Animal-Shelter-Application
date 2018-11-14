@@ -1,6 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/animal.rb')
+require_relative('../models/owner.rb')
 also_reload('./models/*')
 
 get '/animals' do
@@ -15,7 +16,8 @@ get '/animals/new' do
 end
 
 post '/animals' do
-  Animal.new(params).save
+  animal = Animal.new(params)
+  animal.save
   redirect to '/animals'
 end
 

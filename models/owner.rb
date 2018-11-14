@@ -32,6 +32,7 @@ class Owner
     sql = "SELECT * FROM owners WHERE id = $1;"
     values = [id]
     result = SqlRunner.run(sql, values)
+    return [] if result.count == 0
     return Owner.new(result.first)
   end
 

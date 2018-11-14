@@ -11,7 +11,6 @@
       <p> <b>Adoption Status:</b> <%= animal.adoption_status %> </p>
       <p> <b>Day Admitted:</b> <%= animal.day_admitted %> </p>
       <p> <b>Age:</b> <%= animal.age %> </p>
-      <p> <b>Owner:</b> <%= Owner.find(animal.owner_id).name %> </p>
 
       <div class="button">
         <a href="/animals/<%= animal.id %>/edit">EDIT <%= animal.name %> </a>
