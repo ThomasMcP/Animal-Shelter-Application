@@ -5,7 +5,8 @@ DROP TABLE owners;
 CREATE TABLE owners(
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255),
-  address VARCHAR(255)
+  address VARCHAR(255),
+  pets VARCHAR(255)
 );
 
 CREATE TABLE animals(
@@ -18,8 +19,3 @@ CREATE TABLE animals(
   day_admitted DATE,
   owner_id INT8 REFERENCES owners(id) ON DELETE CASCADE
 );
-
--- CREATE TABLE adoptions(
---   id SERIAL8 PRIMARY KEY,
---   owner_id
--- )

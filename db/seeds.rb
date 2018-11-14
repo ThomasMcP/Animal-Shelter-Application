@@ -7,12 +7,14 @@ Owner.delete_all()
 
 owner1 = Owner.new({
   'name' => 'Johnny Teaspoons',
-  'address' => '44 Wire Place, Edinburgh'})
+  'address' => '44 Wire Place, Edinburgh',
+  'pets' => []})
 owner1.save
 
 owner2 = Owner.new({
   'name' => 'Mr David Dickinson',
-  'address' => '1 Bronzed Place, Shropshire'})
+  'address' => '1 Bronzed Place, Shropshire',
+  'pets' => []})
 owner2.save
 
 animal1 = Animal.new({
