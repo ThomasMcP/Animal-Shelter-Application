@@ -12,11 +12,11 @@
     <input type="text" name="address", id="address" value="<%= @owner.address %>" >
   </div>
 
-  <div class="form-el">
+  <div class="form-element">
       <label for="pet_select">Select Pet:</label>
       <select name="pet_select" id="pet_select">
         <% @animals.each do |animal| %>
-            <option value=<%= animal.id %> selected="<%= @owner.pet_id %>">
+            <option value=<%= animal.id %> selected="<%= animal.name%>">
               <%= animal.name %>
             </option>
         <% end %>
@@ -24,7 +24,7 @@
     </div>
 
 
-  <div class="form-el">
+  <div class="form-element">
       <input type="submit" value="Edit Owner"/>
     </div>
 
