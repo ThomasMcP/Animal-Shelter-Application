@@ -1,13 +1,12 @@
+* {
+  font-family: 'Montserrat', sans-serif;
 
+}
 
-
-/* #front_page_image {
-  display: inline-block;
-  border: 5px double;
+h2 {
   text-align: center;
-  border-radius: 50%;
+}
 
-} */
 ul {
   list-style-type: none;
   margin: 0;
@@ -24,8 +23,17 @@ li {
   border-radius: 15px;
 }
 
+li a {
+  text-align: center;
+  text-decoration: none;
+}
+
 li a:hover {
-    background-color: lightgreen;
+  background-color: lightgreen;
+  margin: 10px;
+  border: 10px;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 #front-page-title {
@@ -38,7 +46,6 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transform: rotate(-270deg);
   border-radius: 50%;
   border-radius: 2px solid black;
 }
@@ -55,4 +62,61 @@ img {
   background-color: blue;
   padding: 20px;
   border: 2px solid black;
+}
+
+.form-element {
+  text-align: center;
+}
+
+.animal {
+  text-align: center;
+}
+
+p {
+  font-size: 15pt;
+  text-align: center;
+}
+
+label {
+  font-size: 15pt;
+}
+
+.button {
+  text-align: center;
+  display: inline-block;
+  width: 20ch;
+  margin: 10px;
+  border: 10px;
+  padding: 10px;
+  background-color: lightblue;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.button a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.button a:hover {
+    background-color: yellow;
+    width: 20ch;
+    margin: 10px;
+    border: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+input[type="submit"] {
+  text-align: center;
+  background-color: red;
+  color: white;
+  margin: 10px;
+  border: 10px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.delete-button {
+
 }

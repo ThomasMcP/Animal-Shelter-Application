@@ -8,12 +8,24 @@
       <p> <b>Name:</b> <%= owner.name %> </p>
       <p> <b>Address:</b> <%= owner.address %> </p>
 
-      <a href="/owners/<%= owner.id %>/edit">Edit</a>
+      <br>
 
-      <a href="/owners/<%= owner.id %>">Pets</a>
+      <div class="button">
+        <a href="/owners/<%= owner.id %>/edit">EDIT OWNER</a>
+      </div>
 
-      <form action="/owners/<%= owner.id %>/delete"  method="post"> <input type="submit" value="Delete">
+      <div class="button">
+        <a href="/owners/<%= owner.id %>">SEE PETS</a>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="delete-button">
+        <form action="/owners/<%= owner.id %>/delete"  method="post"> <input type="submit" value="Delete">
       </form>
+      </div>
+
 
       <hr>
   </div>

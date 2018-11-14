@@ -12,9 +12,19 @@
       <p> <b>Day Admitted:</b> <%= animal.day_admitted %> </p>
       <p> <b>Age:</b> <%= animal.age %> </p>
       <p> <b>Owner:</b> <%= animal.owner_id %> </p>
-      <a href="/animals/<%= animal.id %>/edit">Edit</a>
+
+      <div class="button">
+        <a href="/animals/<%= animal.id %>/edit">EDIT <%= animal.name %> </a>
+      </div>
+
+      <br>
+      <br>
+
       <form action="/animals/<%= animal.id %>/delete"  method="post"> <input type="submit" value="Delete">
       </form>
+
+      <br>
+
       <hr>
   </div>
   <% end %>
